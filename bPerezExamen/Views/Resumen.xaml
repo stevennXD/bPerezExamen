@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bPerezExamen.Views.Resumen"
+             Title="Resumen">
+    <VerticalStackLayout>
+        <Label 
+            Text="Usuario conectado"
+            VerticalOptions="End" 
+            HorizontalOptions="End"
+            x:Name="lblUsuarioConectado" />
+
+        <Label 
+            Text="RESUMEN"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="22"
+            TextColor="Blue" />
+
+        <Grid RowSpacing="10" ColumnDefinitions="*, *">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="txtNombre" Grid.Row="0" Grid.Column="1" IsEnabled="False"  />
+
+            <Label Text="Apellido:" Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="txtApellido" Grid.Row="1" Grid.Column="1" IsEnabled="False"  />
+
+            <Label Text="VA:" Grid.Row="2" Grid.Column="0" />
+            <Entry x:Name="txtVA" Grid.Row="2" Grid.Column="1" IsEnabled="False"  />
+            
+            <Label Text="Fecha:" Grid.Row="3" Grid.Column="0" />
+            <Entry x:Name="txtFecha" Grid.Row="3" Grid.Column="1" IsEnabled="False"  />
+            
+            <Label Text="Ciudad:" Grid.Row="4" Grid.Column="0" />
+            <Entry x:Name="txtCiudad" Grid.Row="4" Grid.Column="1" IsEnabled="False"  />
+
+            <Label Text="Monto Inical:" Grid.Row="5" Grid.Column="0" />
+            <Entry x:Name="txtMontoInicial" Grid.Row="5" Grid.Column="1" IsEnabled="False"  />
+
+            <Label Text="Couta Mensual:" Grid.Row="6" Grid.Column="0" />
+            <Entry x:Name="txtCoutaMensual" Grid.Row="6" Grid.Column="1" IsEnabled="False"  />
+
+            <Label Text="Pago Total:" Grid.Row="7" Grid.Column="0" />
+            <Entry x:Name="txtPagoTotal" Grid.Row="7" Grid.Column="1" IsEnabled="False"  />
+        </Grid>
+
+        <Button x:Name="btnCerrarSesion"
+            Text="Cerrar Sesión"
+            Clicked="btnCerrarSesion_Clicked"
+            Margin="20"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>

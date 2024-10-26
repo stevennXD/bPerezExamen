@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bPerezExamen.Views.Login">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label 
+            Text="POLI DISTRIBUIDORA UPS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            TextColor="Red" />
+
+        <Image 
+            Source="../Resources/Images/logoisrael.png"
+            WidthRequest="150"
+            ></Image>
+        <Image Source="images.png" WidthRequest="200"></Image>
+
+        <Grid RowSpacing="10" ColumnDefinitions="*, *">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Usuario:" Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="txtUsuario" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="txtPassword" IsPassword="True" Grid.Row="1" Grid.Column="1" />
+
+            <Button x:Name="btnIniciar"
+                    Text="Iniciar Sesión"
+                    Clicked="btnIniciar_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="20"/>
+            
+            <Button x:Name="btnAcerca"
+                    Text="Acerca de"
+                    Clicked="btnAcerca_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="20"/>
+        </Grid>
+        
+    </VerticalStackLayout>
+</ContentPage>
